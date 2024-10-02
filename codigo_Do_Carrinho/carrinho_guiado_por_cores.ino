@@ -52,7 +52,7 @@ void loop() {
   // Decide a ação com base nos valores RGB
   decideAction();
   
-  delay(50); // Pode ajustar este delay conforme necessário
+  delay(25); // Pode ajustar este delay conforme necessário
 }
 
 void readRGB() {
@@ -94,17 +94,17 @@ void parar() {
 
 void irParaFrente() {
   // motor 1: ligar
-  digitalWrite(MOTOR_A_IN1, HIGH);
-  digitalWrite(MOTOR_A_IN2, LOW);
+  digitalWrite(MOTOR_A_IN1, LOW);
+  digitalWrite(MOTOR_A_IN2, HIGH);
   //motor 2: ligar
-  digitalWrite(MOTOR_B_IN1, HIGH);
-  digitalWrite(MOTOR_B_IN2, LOW);
+  digitalWrite(MOTOR_B_IN1, LOW);
+  digitalWrite(MOTOR_B_IN2, HIGH);
 }
 
 void irParaDireita() {
   // motor 1: ligar
-  digitalWrite(MOTOR_A_IN1, HIGH);
-  digitalWrite(MOTOR_A_IN2, LOW);
+  digitalWrite(MOTOR_A_IN1, LOW);
+  digitalWrite(MOTOR_A_IN2, HIGH);
   //motor 2: parar
   digitalWrite(MOTOR_B_IN1, HIGH);
   digitalWrite(MOTOR_B_IN2, HIGH);
@@ -115,31 +115,36 @@ void irParaEsquerda() {
   digitalWrite(MOTOR_A_IN1, HIGH);
   digitalWrite(MOTOR_A_IN2, HIGH);
   //motor 2: ligar
-  digitalWrite(MOTOR_B_IN1, HIGH);
-  digitalWrite(MOTOR_B_IN2, LOW);
+  digitalWrite(MOTOR_B_IN1, LOW);
+  digitalWrite(MOTOR_B_IN2, HIGH);
 }
 
 void decideAction() {
-  if (rgb[red] > 210 && rgb[green] > 120 && rgb[blue] > 110) {
-    // Verde: Vai para frente
-    irParaFrente();
-  }
-  else if (rgb[red] > 210 && rgb[green] > 120 && rgb[blue] > 50) {
-    // Azul: Vai para a esquerda
-    irParaEsquerda();
-    delay(700);  // Vira por 500ms. Ajuste conforme necessário.
-    irParaFrente();
-    delay(10);
-  }
-  else if ((rgb[red] > 150 && rgb[green] > 140 && rgb[blue] > 90) || (rgb[red] < 90 && rgb[green] < 91 && rgb[blue] < 80)) {
+  if ((rgb[red] > 150 && rgb[green] > 160 && rgb[blue] > 90) || (rgb[red] < 95 && rgb[green] < 90 && rgb[blue] < 65)) {
   // Preto: Parar
+  Serial.println("Preto");
   parar();
   
   } 
-  else if (rgb[red] > 40 && rgb[green] > 160 && rgb[blue] > 70) {
+  else if (rgb[red] > 180 && rgb[green] > 110 && rgb[blue] > 90) {
+    Serial.println("Verde");
+    // Verde: Vai para frente
+    irParaFrente();
+  }
+
+  else if (rgb[red] > 180 && rgb[green] > 110 && rgb[blue] > 49) {
+    // Azul: Vai para a esquerda
+    Serial.println("Azul");
+    irParaEsquerda();
+    delay(120);  // Vira por 500ms. Ajuste conforme necessário.
+    irParaFrente();
+    delay(10);
+  }
+  else if (rgb[red] > 49 && rgb[green] > 116 && rgb[blue] > 80) {
     // Vermelho: Vai para a direita
+    Serial.println("Vermelho");
     irParaDireita();
-    delay(700);  // Vira por 500ms. Ajuste conforme necessário.
+    delay(120);  // Vira por 500ms. Ajuste conforme necessário.
     irParaFrente();
     delay(10);
   } 
