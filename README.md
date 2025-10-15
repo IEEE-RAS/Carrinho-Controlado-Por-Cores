@@ -76,6 +76,19 @@ Aqui registramos nosso progresso semanalmente. Cada entrada inclui atualizaçõe
       * Verificar o robô 2, uma vez que foi devolvida a ponte H do mesmo.
       * Implementar lógica da mudança da velocidade dos motores.
 
+### Semana 3: (06/10/2025)
+
+**Foco da Semana:** Aperfeiçoar o robô para Feira de Graduação.
+
+  * **Software:**
+      * **Código:** Implementado a lógica de redução de velocidade (branch *Calibracao-Velocidade*) e ajustes nos valores usados para detecção de cor para permitir apresentação na feira.
+  * **Hardware & Modelagem 3D:**
+      * **Eletrônica:** Uso de 2 novos fios para usar o PWM, permitindo o uso de velocidades variadas. 
+  * **Próximos Passos:**
+      * Dar retoques finais no robô 1.
+      * Verificar o robô 2, uma vez que foi devolvida a ponte H do mesmo.
+      * Testar novo código de calibração do sensor/cor.
+
 ---
 
 ## 🚀 Como Contribuir
