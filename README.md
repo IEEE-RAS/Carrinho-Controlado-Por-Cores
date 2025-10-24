@@ -89,6 +89,15 @@ Aqui registramos nosso progresso semanalmente. Cada entrada inclui atualizaçõe
       * Verificar o robô 2, uma vez que foi devolvida a ponte H do mesmo.
       * Testar novo código de calibração do sensor/cor.
 
+### Semana 4: (17/10/2025)
+
+**Foco da Semana:** Testar código de calibração desenvolvido.
+
+  * **Software:**
+      * **Código:** Testado código de calibração e detectado alguns problemas. 
+  * **Próximos Passos:**
+      * Analisar novamente o código de calibração.
+      * Verificação do robô 2.
 ---
 
 ## 🚀 Como Contribuir
