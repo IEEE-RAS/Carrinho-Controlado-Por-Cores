@@ -98,6 +98,16 @@ Aqui registramos nosso progresso semanalmente. Cada entrada inclui atualizaçõe
   * **Próximos Passos:**
       * Analisar novamente o código de calibração.
       * Verificação do robô 2.
+   
+### Semana 5: (01/11/2025)
+
+**Foco da Semana:** Atualizar código de calibração.
+
+  * **Software:**
+      * **Código:** Resolvidos problemas no código de calibração e código atualmente está funcional. 
+  * **Próximos Passos:**
+      * Pesquisar sobre módulo carregador.
+      * Verificação do robô 2.
 ---
 
 ## 🚀 Como Contribuir
