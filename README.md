@@ -13,8 +13,8 @@ Este repositório serve como o diário de desenvolvimento oficial do projeto **R
 | Victor Ariel         | Líder de Projeto             | [@Victor](https://github.com/VitrolaVT)          |
 | Nicassio             | Projetista                   | [@Nicassio](https://github.com/nicassiosantos)   |
 | Daniel Braz          | Projetista                   | [@Daniel](https://github.com/DanielPortoBraz)    |
-| Allany Victória      | Projetista                   | [@Allany](https://github.com/allanyvictoria)     |
-| Alisson Wilker       | Projetista                   | [@Alisson](https://github.com/alissonwilker02)   |
+| Jeferson Almeida     | Projetista                   | [@Jeferson](https://github.com/JefersonAlmeid4)  |
+
 
 ## 🎯 Metas do Projeto
 
@@ -108,6 +108,38 @@ Aqui registramos nosso progresso semanalmente. Cada entrada inclui atualizaçõe
   * **Próximos Passos:**
       * Pesquisar sobre módulo carregador.
       * Verificação do robô 2.
+   
+### Semana 6: (12/11/2025)
+
+**Foco da Semana:** Iniciar processo de soldagem dos componentes do módulo carregador.
+
+  * **Hardware & Modelagem 3D:**
+      * **Soldagem:** Foram soldados os fios necessários para fazer a inserção do módulo carregador: conexões entre a bateria, módulo carregador e Step-Up. 
+  * **Próximos Passos:**
+      * Finalizar soldagem.
+      * Replicar para o segundo módulo.
+   
+ ### Semana 7: (19/11/2025)
+
+**Foco da Semana:** Finzalizar soldagem dos componentes do primeiro módulo carregador.
+
+  * **Hardware & Modelagem 3D:**
+      * **Soldagem:** Foi finalizada a soldagem do primeiro módulo carregador. 
+  * **Próximos Passos:**
+      * Carregar módulo.
+      * Realizar testes no robô, verificando se está alimentando o sistema e se o carregamento ocorreu bem.
+      * Replicar para o segundo módulo.
+
+### Semana 8: (24/11/2025)
+
+**Foco da Semana:** Realizar a solda do segundo módulo carregador.
+
+  * **Hardware & Modelagem 3D:**
+      * **Soldagem:** Foram soldadas 2 novas baterias em série, já que a bateria anterior do projeto foi reutilizada pelo RAS. As conexões de fios entre o módulo carregador e as baterias também foram feitas pela solda. 
+  * **Próximos Passos:**
+      * Finalizar soldagem, inserindo o componente do Step-Up.
+      * Carregar e verificar ambos os 2 módulos carregadores.
+      * Realizar testes dos 2 módulos para os 2 robôs.
 ---
 
 ## 🚀 Como Contribuir
