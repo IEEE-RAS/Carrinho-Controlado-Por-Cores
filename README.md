@@ -140,6 +140,21 @@ Aqui registramos nosso progresso semanalmente. Cada entrada inclui atualizaçõe
       * Finalizar soldagem, inserindo o componente do Step-Up.
       * Carregar e verificar ambos os 2 módulos carregadores.
       * Realizar testes dos 2 módulos para os 2 robôs.
+
+### Semana 9: (01/12/2025)
+
+**Foco da Semana:** Realizar a solda do segundo módulo carregador, testar na ponte H e tirar fotos para apresentação.
+
+  * **Hardware & Modelagem 3D:**
+      * **Soldagem:** Foi finalizado a solda do segundo módulo carrgeador, apesar de haver algumas pendências.
+      * **Teste:** Foi testado se o primeiro módulo iria carregar o projeto. Quando conectado a ponte H, foi visto que ele conseguia alimentar o sistema.
+  * **Outros:**
+      * Apresentação:** Foram tiradas fotos e gravados vídeos de como o projeto estava, a fim de serem materiais para se colocar na apresentação do projeto. 
+  * **Próximos Passos:**
+      * Testar o segundo módulo, em especial, verificar sobre as baterias, já que uma indicou voltagem próxima a 0V.
+      * Calibrar o segundo Step-Up.
+      * Carregar ambos os 2 módulos carregadores.
+      * Resolver possíveis pendências no quesito na ordem dos componentes (ver com Mike).
 ---
 
 ## 🚀 Como Contribuir
