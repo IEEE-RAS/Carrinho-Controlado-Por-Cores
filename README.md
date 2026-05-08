@@ -11,7 +11,6 @@ Este repositório serve como o diário de desenvolvimento oficial do projeto **R
 | Nome                 | Cargo no projeto             | GitHub                                           |
 | -------------------- | -------------------------    | ------------------------------------------       |
 | Victor Ariel         | Líder de Projeto             | [@Victor](https://github.com/VitrolaVT)          |
-| Nicassio             | Projetista                   | [@Nicassio](https://github.com/nicassiosantos)   |
 | Daniel Braz          | Projetista                   | [@Daniel](https://github.com/DanielPortoBraz)    |
 | Jeferson Almeida     | Projetista                   | [@Jeferson](https://github.com/JefersonAlmeid4)  |
 
@@ -155,6 +154,35 @@ Aqui registramos nosso progresso semanalmente. Cada entrada inclui atualizaçõe
       * Calibrar o segundo Step-Up.
       * Carregar ambos os 2 módulos carregadores.
       * Resolver possíveis pendências no quesito na ordem dos componentes (ver com Mike).
+   
+### Semana 10: (27/04/2026)
+
+**Foco da Semana:** Verificar código da calibração da velocidade, ajustar ordem dos componentes e tirar medidas do carrinho.
+
+  * **Hardware & Modelagem 3D:**
+      * **Soldagem:** Foi ajustado e soldado as peças do sistema do módulo carregador, faltando conectar botão.
+      * **Teste:** Foi testado se o sistema ainda continua funcional. Resultados: Funciona normalmente.
+      * **Medição:** Foi tiradas medidas do carrinho:
+        * **Rodas (Diâmetro):** 6,7 cm
+        * **Largura (Horizontal):** 10,1 cm
+        * **Comprimento (Vertical):** 21 cm
+        * **Altura (Placa - Ponta da roda traseira):** 4,8 cm
+  * **Próximos Passos:**
+      * Finalizar conexões faltantes do botão no módulo trabalhado.
+      * Unir códigos de calibração do sensor com da calibração da velocidade.
+  
+### Semana 11: (07/05/2026)
+
+**Foco da Semana:** Finalizar conexão do botão no módulo carregador e iniciar união dos códigos de calibração.
+
+  * **Hardware & Modelagem 3D:**
+      * **Soldagem:** Foi finalizada a soldagem do botão ao sistema do módulo carregador. Problema encontrado: Falta de solda na S10.
+  * **Software:**
+      * **Calibração:** Foi feito um teste usando um esboço do código já com a união das partes de calibração da velocidade e do sensor. Resultados: O teste passou normalmente usando o *SerialPrintln* da IDE, porém como foi conectado via o cabo, não foi possível testar a movimentação das rodas usando PWM.
+  * **Próximos Passos:**
+      * Testar carregamento do sistema do módulo carregador.
+      * Corrigir novo código de calibração e testá-lo usando bateria conectada.
+ 
 ---
 
 ## 🚀 Como Contribuir
