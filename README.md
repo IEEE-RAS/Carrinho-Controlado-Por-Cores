@@ -5,6 +5,7 @@
 ## 📝 Visão Geral
 
 Este repositório serve como o diário de desenvolvimento oficial do projeto **Robô Orientado por Cores**. Nosso objetivo é atualizar e melhorar o antigo projeto do robô orientado por cores. Aqui, documentamos nosso progresso, desafios e aprendizados em todas as frentes: software, hardware, eletrônica e design mecânico.
+> Um manual de uso de como carregar e os passos para usar os códigos do robô estarão no final desse diário de bordo.
 
 ## 👥 Equipe
 
@@ -205,6 +206,63 @@ Aqui registramos nosso progresso semanalmente. Cada entrada inclui atualizaçõe
   * **Próximos Passos:**
       * A decidir na próxima reunião.
  
+---
+## 📖 Manual de Uso
+
+### 🔋 Como carregar a bateria
+
+Os passos para carregamento do sistema são:
+
+1. Configure a fonte de bancada para tensão de **5 V** e corrente entre **1 A e 2 A** (recomendação: **1.2 A**).
+
+2. Conecte a entrada positiva da fonte na entrada **"+" (Vin+)** do módulo carregador e a saída negativa da fonte na saída **"-" (Vout-)** do módulo carregador.
+
+3. Verifique se o interruptor do sistema está desligado — posição **"O"**.
+
+4. Ao ligar a fonte, deve acender um **LED vermelho** no módulo carregador, indicando que o sistema está carregando.
+
+5. Quando o carregamento estiver concluído, irá acender um **LED verde** no mesmo módulo carregador.
+
+> OBS: É possível retirar antes de se carregar por completo.
+
+---
+
+### 🤖 Como usar os códigos
+
+Para usar o código no robô controlado por cores, basta carregá-lo pela IDE. Dependendo de seu interesse, há **2 códigos** disponíveis para uso:
+
+1. **Código de calibração manual do sensor TCS3200 para cor**, permitindo configuração dinâmica dos valores de cada cor a depender do ambiente + controle de velocidade por PWM, disponível na branch [Calibracao-Sensor_Cor-PWM](https://github.com/IEEE-RAS/Carrinho-Controlado-Por-Cores/tree/Calibracao-Sensor_Cor-PWM);
+
+2. **Código sem calibração manual do sensor**, usando um alcance de cada cor configurado de forma constante + controle de velocidade por PWM, disponível na branch [Calibracao-Velocidade](https://github.com/IEEE-RAS/Carrinho-Controlado-Por-Cores/tree/Calibracao-Velocidade).
+
+Recomenda-se utilizar a **Opção 1**, pois ela permite adequação à quantidade de luz do ambiente. Porém, caso seja de interesse pular a etapa de calibração, pode-se utilizar a **Opção 2**.
+
+#### 📌 Processo de calibração do sensor
+
+1. A primeira etapa é encontrar o *jumper* (fio) usado para mudança de estado. Ele é um fio macho-macho, onde uma extremidade é conectada ao **GND** do WAVGAT e a outra extremidade está desconectada.
+
+2. Ligue o robô pelo interruptor — posição **"I"**.
+
+3. Ao ligar, o robô estará no modo de calibração, esperando mudanças na entrada **2** do WAVGAT. A cada mudança será trocada a cor que está sendo calibrada. A ordem é:
+
+   * **1ª mudança** → calibra cor vermelha  
+   * **2ª mudança** → calibra cor verde  
+   * **3ª mudança** → calibra cor azul  
+   * **4ª mudança** → calibra cor preta  
+
+4. Coloque a superfície vermelha abaixo do sensor. Encoste rapidamente o *jumper* usado na entrada **2**. Se atente que um LED no WAVGAT irá piscar ao conectar. Espere até o LED piscar novamente. Após essa segunda piscada, já pode alterar a cor.
+
+> OBS: NÃO PRECISA CONECTAR O JUMPER NA ENTRADA 2. APENAS ENCOSTAR JÁ FUNCIONA. UTILIZE O LED COMO REFERÊNCIA.
+
+5. Troque a superfície para a cor verde. Repita o processo de encostar o *jumper* na entrada **2**.
+
+6. Troque a superfície para a cor azul. Repita o processo de encostar o *jumper* na entrada **2**.
+
+7. Troque a superfície para a cor preta. Repita o processo de encostar o *jumper* na entrada **2**.
+
+8. Se tudo ocorrer corretamente, o robô já estará pronto para uso.
+
+
 ---
 
 ## 🚀 Como Contribuir
