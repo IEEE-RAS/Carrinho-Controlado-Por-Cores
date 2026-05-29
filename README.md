@@ -37,7 +37,7 @@ Este repositório serve como o diário de desenvolvimento oficial do projeto **R
 | ----------------- | ------------------------------------------------------------------------ |
 | **Linguagens**    | C++                                                                      |
 | **Frameworks**    |...                                                                       |
-| **Hardware**      | Arduino UNO R3 (WAVGATE), Sensor TCS3200, Ponte H L298N,  Motores        |
+| **Hardware**      | Arduino UNO R3 (WAVGATE), Sensor TCS3200, Ponte H L298N,  Motores, Baterias de Lítio (2), Step-Up MT3608, Módulo Carregador TP4056|
 | **Modelagem 3D**  | ...                                                                      |
 | **Design de PCB** | ...                                                                      |
 | **Simulação**     | ...                                                                      |
@@ -182,6 +182,28 @@ Aqui registramos nosso progresso semanalmente. Cada entrada inclui atualizaçõe
   * **Próximos Passos:**
       * Testar carregamento do sistema do módulo carregador.
       * Corrigir novo código de calibração e testá-lo usando bateria conectada.
+   
+### Semana 12: (22/05/2026)
+
+**Foco da Semana:** Carregamento da bateria e atualizar código da calibração do sensor + PWM.
+
+  * **Software:**
+      * **Calibração:** O novo código de calibração do sensor de cor e uso do PWM foi atualizado.
+   * **Outros:**
+     * **Carregamento:** Bateria foi carregada até 3.8 V.
+  * **Próximos Passos:**
+      * Testar o novo código usando a alimentação da própria bateria em vez do *"SerialPrintln"*.
+
+### Semana 13: (29/05/2026)
+
+**Foco da Semana:** Teste do novo código juntamente com a bateria carregada e Manual de Uso no README.
+
+  * **Software:**
+      * **Calibração:** Foi realizado o teste para as novas integrações. Resultado: Teste seguiu como desejado.
+   * **Outros:**
+     * **Manual de Uso:** Adicionado no fim desse diário de bordo um manual de como carregar as baterias e de como calibrar o sensor.
+  * **Próximos Passos:**
+      * A decidir na próxima reunião.
  
 ---
 
