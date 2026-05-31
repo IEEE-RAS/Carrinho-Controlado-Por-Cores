@@ -205,6 +205,27 @@ Aqui registramos nosso progresso semanalmente. Cada entrada inclui atualizaçõe
      * **Manual de Uso:** Adicionado no fim desse diário de bordo um manual de como carregar as baterias e de como calibrar o sensor.
   * **Próximos Passos:**
       * A decidir na próxima reunião.
+
+ ### Semana 14: (31/05/2026)
+
+**Foco da Semana:** Reunião remota para discutir próximos passos do projeto.
+
+   * **Hardware & Modelagem 3D:**
+      * **Tarefas:**
+          * 1- Esboço da modelagem 3D, deve ser completo, pensado como "carcaça/casca" do robô. OBS: Deve considerar como visualmente o robô será; Deve considerar o espaço para acomodar bateria; Deve considerar saídas do módulo carregador e do interruptor; Deve ser compacto.
+          * 2- Organizar espaço destinado aos componentes. Possível organização: I-Arduino colado no topo (mesma posição de antes); II- Kit Bateria no meio (step-up logo abaixo da bateria, em contato com a Ponte H); III- Ponte H rotacionada (trocou as saídas de alimentação das rodas); IV - Organizar fios/jumpers para ficarem compactos.
+          * 3- Organizar especificamente o Kit Bateria, deixando mais compacto e seguindo a organização do espaço destinado no chassi. OBS: Implementar do zero esse kit para osegundo robô. Peças usadas: Bateria de lítio em paralelo, Step-Up, Módulo carregador (já está na caixa) e Interruptor (já está na caixa).
+
+     
+        > **Observação:** As tarefas serão aplicadas no segundo robô a níveis de prototipagem.
+     
+      * **Divisão:**
+          * 1- Modelagem 3D - Daniel;
+          * 2- Organização dos componentes - Jeferson;
+          * 3- Implementação do 2º Kit Bateria - Victor.
+             
+  * **Próximos Passos:**
+      * Organização individual de cada integrante para implementar sua tarefa.
  
 ---
 ## 📖 Manual de Uso
