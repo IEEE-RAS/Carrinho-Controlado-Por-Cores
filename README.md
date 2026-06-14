@@ -226,6 +226,16 @@ Aqui registramos nosso progresso semanalmente. Cada entrada inclui atualizaçõe
              
   * **Próximos Passos:**
       * Organização individual de cada integrante para implementar sua tarefa.
+
+### Semana 15: (12/06/2026)
+
+**Foco da Semana:** Organização inicial do segundo robô e implementação do segundo Kit Bateria.
+
+  * **Hardware & Modelagem 3D:**
+      * **Organização:** Foi feito a organização inicial dos jumpers/fios do robô.
+      * **Soldagem:** Foi organizado os materiais necessários para soldagem do Kit Bateria e configuração do Step-Up.
+  * **Próximos Passos:**
+      * Continuação da organização e soldagem dos componentes no Kit Bateria.
  
 ---
 ## 📖 Manual de Uso
