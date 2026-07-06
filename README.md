@@ -236,7 +236,27 @@ Aqui registramos nosso progresso semanalmente. Cada entrada inclui atualizaçõe
       * **Soldagem:** Foi organizado os materiais necessários para soldagem do Kit Bateria e configuração do Step-Up.
   * **Próximos Passos:**
       * Continuação da organização e soldagem dos componentes no Kit Bateria.
- 
+
+### Semana 16: (30/06/2026)
+
+**Foco da Semana:** Soldagem final do Kit Bateria.
+
+  * **Hardware & Modelagem 3D:**
+      * **Soldagem:** Foi finalizada a soldagem da bateria no Kit Bateria.
+  * **Próximos Passos:**
+      * Fazer camadas de proteção dos componentes;
+      * Finalizar organização dos jumpers faltantes;
+      * Carregar e testar o robô.
+
+### Semana 17: (06/07/2026)
+
+**Foco da Semana:** Finalizar organização dos jumpers, aplicar camadas de proteção dos componentes no Kit Bateria e carregar a bateria.
+
+  * **Hardware & Modelagem 3D:**
+      * **Organização:** Foi finalizada a organização dos jumpers no robô; Foi feita camadas de proteção dos componentes; Carregou um pouco a bateria.
+  * **Próximos Passos:**
+      * Realizar testes e correções finais;
+      * Acoplar o chassi em modelo 3D no robô.
 ---
 ## 📖 Manual de Uso
 
