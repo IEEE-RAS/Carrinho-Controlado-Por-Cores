@@ -257,6 +257,16 @@ Aqui registramos nosso progresso semanalmente. Cada entrada inclui atualizaçõe
   * **Próximos Passos:**
       * Realizar testes e correções finais;
       * Acoplar o chassi em modelo 3D no robô.
+
+### Semana 18: (08/07/2026)
+
+**Foco da Semana:** Ajuste dos pinos dos motores, ajuste da velocidade para cada motor e testes da nova arquitetura.
+
+  * **Software:**
+    * **Calibração:** Correção dos pinos usados para os 2 motores, uma vez que estavam trocados com a mudança da organização da ponte H; Ajuste fino da velocidade para cada motor; Testes feitos usando código de calibração da velocidade (sem uso de calibração manual do sensor de cor) para o robô 2.
+  * **Próximos Passos:**
+      * Atualizar código principal com calibração do sensor de cor, a fim de acomodar a nova arquitetura e ordem dos componentes;
+      * Acoplar o chassi em modelo 3D no robô.
 ---
 ## 📖 Manual de Uso
 
