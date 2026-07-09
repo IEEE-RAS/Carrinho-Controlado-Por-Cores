@@ -8,10 +8,16 @@
 #define sensorOut 8
 
 //pinos de controle dos motores de mesmo PWM
-#define MOTOR_A_IN1 3 // D3
-#define MOTOR_A_IN2 9 // D5
-#define MOTOR_B_IN1 10 // D6
-#define MOTOR_B_IN2 11 // D9
+#define MOTOR_A_IN1 10 // D3
+#define MOTOR_A_IN2 11 // D5
+#define MOTOR_B_IN1 12 // D6
+#define MOTOR_B_IN2 13 // D9
+#define ENABLE_A 3
+#define ENABLE_B 9
+
+#define VELOCIDADE_MOTOR_A 90
+#define VELOCIDADE_MOTOR_B 80
+
 
 //define o valor pra cada cor nos pinos
 #define red 0
@@ -40,6 +46,8 @@ void setup() {
   pinMode(MOTOR_A_IN2, OUTPUT);
   pinMode(MOTOR_B_IN1, OUTPUT);
   pinMode(MOTOR_B_IN2, OUTPUT);
+  pinMode(ENABLE_A, OUTPUT);
+  pinMode(ENABLE_B, OUTPUT);
   
   // Inicialmente, ambos os motores estao parados
   parar();
@@ -90,6 +98,10 @@ void parar() {
   //motor 2: parar
   digitalWrite(MOTOR_B_IN1, HIGH);
   digitalWrite(MOTOR_B_IN2, HIGH);
+
+  // Velocidade dos motores em ~35%
+  analogWrite(ENABLE_A, VELOCIDADE_MOTOR_A);
+  analogWrite(ENABLE_B, VELOCIDADE_MOTOR_B);
 }
 
 void irParaFrente() {
@@ -99,6 +111,10 @@ void irParaFrente() {
   //motor 2: ligar
   digitalWrite(MOTOR_B_IN1, LOW);
   digitalWrite(MOTOR_B_IN2, HIGH);
+
+  // Velocidade dos motores em ~35%
+  analogWrite(ENABLE_A, VELOCIDADE_MOTOR_A);
+  analogWrite(ENABLE_B, VELOCIDADE_MOTOR_B);
 }
 
 void irParaDireita() {
@@ -108,6 +124,10 @@ void irParaDireita() {
   //motor 2: parar
   digitalWrite(MOTOR_B_IN1, HIGH);
   digitalWrite(MOTOR_B_IN2, HIGH);
+
+  // Velocidade dos motores em ~35%
+  analogWrite(ENABLE_A, VELOCIDADE_MOTOR_A);
+  analogWrite(ENABLE_B, VELOCIDADE_MOTOR_B);
 }
 
 void irParaEsquerda() {
@@ -117,37 +137,44 @@ void irParaEsquerda() {
   //motor 2: ligar
   digitalWrite(MOTOR_B_IN1, LOW);
   digitalWrite(MOTOR_B_IN2, HIGH);
+
+  // Velocidade dos motores em ~35%
+  analogWrite(ENABLE_A, VELOCIDADE_MOTOR_A);
+  analogWrite(ENABLE_B, VELOCIDADE_MOTOR_B);
 }
 
 void decideAction() {
-  if ((rgb[red] > 150 && rgb[green] > 160 && rgb[blue] > 90) || (rgb[red] < 95 && rgb[green] < 90 && rgb[blue] < 65)) {
+  if ((rgb[red] > 250 && rgb[green] > 230 && rgb[blue] > 160) || (rgb[red] < 30 && rgb[green] < 30 && rgb[blue] < 30)) {
   // Preto: Parar
   Serial.println("Preto");
   parar();
   
   } 
-  else if (rgb[red] > 180 && rgb[green] > 110 && rgb[blue] > 90) {
+
+  //azul entre 35 e 50 (Robô 1) ou entre 60 e 80 (Robô 2)
+  else if (rgb[blue] >= 60 && rgb[blue] <= 80) {
+    // Azul: Vai para a esquerda
+    Serial.println("Azul");
+    irParaEsquerda();
+    delay(120);  // Vira por 120ms. Ajuste conforme necessário.
+    irParaFrente();
+    delay(10);
+  }
+
+  //verde entre 60 e 95 (Robô 1) ou entre 95 e 160 (Robô 2)
+  else if (rgb[green] <= 160 && rgb[green] >= 95) {
     Serial.println("Verde");
     // Verde: Vai para frente
     irParaFrente();
   }
-
-  else if (rgb[red] > 180 && rgb[green] > 110 && rgb[blue] > 49) {
-    // Azul: Vai para a esquerda
-    Serial.println("Azul");
-    irParaEsquerda();
-    delay(120);  // Vira por 500ms. Ajuste conforme necessário.
-    irParaFrente();
-    delay(10);
-  }
-  else if (rgb[red] > 49 && rgb[green] > 116 && rgb[blue] > 80) {
+  
+  //vermelho entre 30 e 60 (Robô 1) ou entre 60 e 90 (Robô 2)
+  else if (rgb[red] >= 60 && rgb[red] <= 90) {
     // Vermelho: Vai para a direita
     Serial.println("Vermelho");
     irParaDireita();
-    delay(120);  // Vira por 500ms. Ajuste conforme necessário.
+    delay(90);  // Vira por 90ms. Ajuste conforme necessário.
     irParaFrente();
     delay(10);
   } 
 }
-
-
