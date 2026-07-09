@@ -15,17 +15,18 @@
 // ======================================================
 
 // Ponte H
-#define MOTOR_A_IN1 13
-#define MOTOR_A_IN2 12
-#define MOTOR_B_IN1 10
-#define MOTOR_B_IN2 11
+#define MOTOR_A_IN1 10
+#define MOTOR_A_IN2 11
+#define MOTOR_B_IN1 12
+#define MOTOR_B_IN2 13
 
 // PWM
 #define ENABLE_A 3
 #define ENABLE_B 9
 
 // Velocidade dos motores (0 - 255)
-#define VELOCIDADE 100
+#define VELOCIDADE_MOTOR_A 90
+#define VELOCIDADE_MOTOR_B 80
 
 // ======================================================
 //          BOTÃO/FIO USADO PARA ALTERAR ESTADO
@@ -301,8 +302,8 @@ void parar() {
   digitalWrite(MOTOR_B_IN1, HIGH);
   digitalWrite(MOTOR_B_IN2, HIGH);
 
-  analogWrite(ENABLE_A, VELOCIDADE);
-  analogWrite(ENABLE_B, VELOCIDADE);
+  analogWrite(ENABLE_A, VELOCIDADE_MOTOR_A);
+  analogWrite(ENABLE_B, VELOCIDADE_MOTOR_B);
 }
 
 // VERDE
@@ -314,8 +315,8 @@ void irParaFrente() {
   digitalWrite(MOTOR_B_IN1, LOW);
   digitalWrite(MOTOR_B_IN2, HIGH);
 
-  analogWrite(ENABLE_A, VELOCIDADE);
-  analogWrite(ENABLE_B, VELOCIDADE);
+  analogWrite(ENABLE_A, VELOCIDADE_MOTOR_A);
+  analogWrite(ENABLE_B, VELOCIDADE_MOTOR_B);
 }
 
 // VERMELHO
@@ -327,8 +328,8 @@ void irParaDireita() {
   digitalWrite(MOTOR_B_IN1, HIGH);
   digitalWrite(MOTOR_B_IN2, HIGH);
 
-  analogWrite(ENABLE_A, VELOCIDADE);
-  analogWrite(ENABLE_B, VELOCIDADE);
+  analogWrite(ENABLE_A, VELOCIDADE_MOTOR_A);
+  analogWrite(ENABLE_B, VELOCIDADE_MOTOR_B);
 }
 
 // AZUL
@@ -340,8 +341,8 @@ void irParaEsquerda() {
   digitalWrite(MOTOR_B_IN1, LOW);
   digitalWrite(MOTOR_B_IN2, HIGH);
 
-  analogWrite(ENABLE_A, VELOCIDADE);
-  analogWrite(ENABLE_B, VELOCIDADE);
+  analogWrite(ENABLE_A, VELOCIDADE_MOTOR_A);
+  analogWrite(ENABLE_B, VELOCIDADE_MOTOR_B);
 }
 
 // Processo de decisão do movimento com base na leitura do sensor de cores
