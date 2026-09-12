@@ -11,8 +11,8 @@ Este repositório serve como o diário de desenvolvimento oficial do projeto **R
 
 | Nome                 | Cargo no projeto             | GitHub                                           |
 | -------------------- | -------------------------    | ------------------------------------------       |
-| Victor Ariel         | Líder de Projeto             | [@Victor](https://github.com/VitrolaVT)          |
-| Daniel Braz          | Projetista                   | [@Daniel](https://github.com/DanielPortoBraz)    |
+| Daniel Braz         | Líder de Projeto             | [@Daniel](https://github.com/DanielPortoBraz)          |
+| Levi Nogueira          | Projetista                   | [@Levi](https://github.com/levi-vasc)    |
 | Jeferson Almeida     | Projetista                   | [@Jeferson](https://github.com/JefersonAlmeid4)  |
 
 
@@ -20,17 +20,13 @@ Este repositório serve como o diário de desenvolvimento oficial do projeto **R
 
 ### Metas atuais
 
-  * **Hardware:** Acomplar módulo carregador para bateria e deixar projeto mais profissional.
-  * **Software:** Calibrar sensor para cores e calibrar velocidade dos motores.
+  * A definir
 
 ### Objetivos Gerais
 
   - **Hardware:**
-      - [ ] Melhorar chassi para deixar mais estético, organizado e profissional.
-      - [ ] Integrar módulo carregador.
-  - **Software:**
-      - [ ] Desenvolver um sistema de calibração do sensor de forma flexível e versátil a depender do ambiente e sua iluminação.
-      - [ ] Implementar lógica para controle das velocidades de cada motor através do controle PWM da ponte H.
+      - [ ] Desenvolver chassi para proteção e organização dos circuitos, e estilização do projeto.
+      - [ ] Finalizar sistema de calibração com Push-Button soldado ao circuito
 
 ## 🛠️ Tecnologias e Ferramentas
 
@@ -38,7 +34,7 @@ Este repositório serve como o diário de desenvolvimento oficial do projeto **R
 | ----------------- | ------------------------------------------------------------------------ |
 | **Linguagens**    | C++                                                                      |
 | **Frameworks**    |...                                                                       |
-| **Hardware**      | Arduino UNO R3 (WAVGATE), Sensor TCS3200, Ponte H L298N,  Motores, Baterias de Lítio (2), Step-Up MT3608, Módulo Carregador TP4056|
+| **Hardware**      | Arduino UNO R3 (WAVGAT), Sensor TCS3200, Ponte H L298N,  Motores, Baterias de Lítio (2), Step-Up MT3608, Módulo Carregador TP4056|
 | **Modelagem 3D**  | ...                                                                      |
 | **Design de PCB** | ...                                                                      |
 | **Simulação**     | ...                                                                      |
@@ -267,6 +263,17 @@ Aqui registramos nosso progresso semanalmente. Cada entrada inclui atualizaçõe
   * **Próximos Passos:**
       * Atualizar código principal com calibração do sensor de cor, a fim de acomodar a nova arquitetura e ordem dos componentes;
       * Acoplar o chassi em modelo 3D no robô.
+
+### Semana 19: (11/09/2026)
+**Foco da Semana:** Finalizar a implementação da calibração de cores no projeto.
+
+* **Software:**
+    *  **Calibração:** Re-correção dos pinos dos motores, em razão de comportamento instável no PWM do pino 9 do WAVGAT. A nova configuração dos pinos é:
+        * **Motor A (Direito):** **IN1** - 10 ; **IN2** - 9 ; **ENA** - 3.
+        * **Motor B (Esquerdo):** **IN1** - 13  ; **IN2** - 12 ; **ENB** - 11.
+* **Hardware:**
+    * **Ativação de calibração:** Houve a troca do jumper macho-macho para um push-button (em montagem provisória), que ativa os passos de calibração das cores.
+
 ---
 ## 📖 Manual de Uso
 
@@ -300,28 +307,23 @@ Recomenda-se utilizar a **Opção 1**, pois ela permite adequação à quantidad
 
 #### 📌 Processo de calibração do sensor
 
-1. A primeira etapa é encontrar o *jumper* (fio) usado para mudança de estado. Ele é um fio macho-macho, onde uma extremidade é conectada ao **GND** do WAVGAT e a outra extremidade está desconectada.
-
-2. Ligue o robô pelo interruptor — posição **"I"**.
-
-3. Ao ligar, o robô estará no modo de calibração, esperando mudanças na entrada **2** do WAVGAT. A cada mudança será trocada a cor que está sendo calibrada. A ordem é:
+1. Ligue o robô pelo interruptor — posição **"I"**.
+2. Ao ligar, o robô estará no modo de calibração, esperando mudanças na entrada **2** do WAVGAT. A cada mudança será trocada a cor que está sendo calibrada. A ordem é:
 
    * **1ª mudança** → calibra cor vermelha  
    * **2ª mudança** → calibra cor verde  
    * **3ª mudança** → calibra cor azul  
    * **4ª mudança** → calibra cor preta  
 
-4. Coloque a superfície vermelha abaixo do sensor. Encoste rapidamente o *jumper* usado na entrada **2**. Se atente que um LED no WAVGAT irá piscar ao conectar. Espere até o LED piscar novamente. Após essa segunda piscada, já pode alterar a cor.
+3. Coloque a superfície vermelha abaixo do sensor. Pressione o push-button usado na entrada **2**. Se atente que um LED no WAVGAT irá piscar ao conectar. Espere até o LED piscar novamente. Após essa segunda piscada, já pode alterar a cor.
 
-> OBS: NÃO PRECISA CONECTAR O JUMPER NA ENTRADA 2. APENAS ENCOSTAR JÁ FUNCIONA. UTILIZE O LED COMO REFERÊNCIA.
+5. Troque a superfície para a cor verde. Repita o processo de pressionar o push-button da entrada **2**.
 
-5. Troque a superfície para a cor verde. Repita o processo de encostar o *jumper* na entrada **2**.
+6. Troque a superfície para a cor azul. Repita o processo de encostar o push-button da entrada **2**.
 
-6. Troque a superfície para a cor azul. Repita o processo de encostar o *jumper* na entrada **2**.
+7. Troque a superfície para a cor preta. Repita o processo de encostar o push-button da entrada **2**.
 
-7. Troque a superfície para a cor preta. Repita o processo de encostar o *jumper* na entrada **2**.
-
-8. Se tudo ocorrer corretamente, o robô já estará pronto para uso.
+8. Se tudo ocorrer corretamente, o robô já estará pronto para uso. É esperado que o LED RX da placa comece a piscar rapidamente, devido ao processo de leitura contínua das cores.
 
 
 ---
