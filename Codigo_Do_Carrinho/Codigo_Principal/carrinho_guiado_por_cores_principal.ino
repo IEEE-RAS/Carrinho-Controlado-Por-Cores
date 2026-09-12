@@ -14,19 +14,22 @@
 //                PINOS - MOTORES + PWM
 // ======================================================
 
-// Ponte H
-#define MOTOR_A_IN1 10
-#define MOTOR_A_IN2 11
-#define MOTOR_B_IN1 12
-#define MOTOR_B_IN2 13
+// Motor A -> Direito
+// Motor B -> Esquerdo
+#define MOTOR_A_IN1 10 // D3
+#define MOTOR_A_IN2 9 // D5
+#define MOTOR_B_IN1 13 // D6
+#define MOTOR_B_IN2 12 // D9
 
 // PWM
 #define ENABLE_A 3
-#define ENABLE_B 9
+#define ENABLE_B 11
+
+
 
 // Velocidade dos motores (0 - 255)
 #define VELOCIDADE_MOTOR_A 90
-#define VELOCIDADE_MOTOR_B 80
+#define VELOCIDADE_MOTOR_B 95
 
 // ======================================================
 //          BOTÃO/FIO USADO PARA ALTERAR ESTADO
@@ -381,7 +384,7 @@ void decideAction() {
       Serial.println("Vermelho detectado - (Direita)");
       irParaDireita();
       delay(120);
-      irParaFrente();
+      
       break;
       
     case 1: // Verde
@@ -393,7 +396,7 @@ void decideAction() {
       Serial.println("Azul detectado - (Esquerda)");
       irParaEsquerda();
       delay(120);
-      irParaFrente();
+      
       break;
       
     case 3: // Preto
