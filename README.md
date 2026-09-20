@@ -26,7 +26,7 @@ Este repositório serve como o diário de desenvolvimento oficial do projeto **R
 
   - **Hardware:**
       - [ ] Desenvolver chassi para proteção e organização dos circuitos, e estilização do projeto.
-      - [ ] Finalizar sistema de calibração com Push-Button soldado ao circuito
+      - [x] Finalizar sistema de calibração com Push-Button soldado ao circuito
 
 ## 🛠️ Tecnologias e Ferramentas
 
@@ -274,10 +274,22 @@ Aqui registramos nosso progresso semanalmente. Cada entrada inclui atualizaçõe
 * **Hardware:**
     * **Ativação de calibração:** Houve a troca do jumper macho-macho para um push-button (em montagem provisória), que ativa os passos de calibração das cores.
 
+
+### Semana 20: (18/09/2026)
+**Foco da Semana:** Finalizar o circuito do projeto
+
+* **Hardware:**
+    * **Ativação de calibração:** Foi feita a soldagem do push-button de calibração aos jumpers no circuito do projeto.
+ 
+* **Carcaça do carrinho:** foram feitas breves pesquisas na plataforma ThingVerse para encontrar um modelo de carcaça com o objetivo de proteger e encaixar os componentes do circuito de forma modularizada, contudo não foram encontrados modelos satisfatórios. Obs: as pesquisas focaram nas palavras-chave: **chassi 2wd**, **Arduino Car** e **Arduino Robot**.
+
+* **Módulo de Carregamento:** O projeto recebeu uma fonte de alimentação (carregador) de 5V e 1A com entrada micro-usb, o que permitirá o carregamento em tomadas domésticas diretamente.
 ---
 ## 📖 Manual de Uso
 
 ### 🔋 Como carregar a bateria
+
+#### Pela fonte de bancada:
 
 Os passos para carregamento do sistema são:
 
@@ -293,6 +305,18 @@ Os passos para carregamento do sistema são:
 
 > OBS: É possível retirar antes de se carregar por completo.
 
+#### Pelo carregador de 5V/1A:
+1. Desligar o circuito - o interruptor deve estar na posição **"O"**.
+   
+2. Encaixar a saída micro-usb do carregador de 5V/1A na entrada micro-usb do módulo carregador.
+  
+3. Conectar o carregador de 5V/1A à uma tomada de **110V ou 220V**.
+   
+4. Aguardar o módulo carregador no modo carregando (**o LED vermelho do módulo irá acender durante este processo**).
+
+5. Retirar o carregador de 5V/1A da tomada quando um **LED verde** ligar no módulo carregador.
+   
+> OBS: É possível retirar antes de se carregar por completo.
 ---
 
 ### 🤖 Como usar os códigos
