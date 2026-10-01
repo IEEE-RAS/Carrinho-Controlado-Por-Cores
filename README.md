@@ -284,6 +284,12 @@ Aqui registramos nosso progresso semanalmente. Cada entrada inclui atualizaçõe
 * **Carcaça do carrinho:** foram feitas breves pesquisas na plataforma ThingVerse para encontrar um modelo de carcaça com o objetivo de proteger e encaixar os componentes do circuito de forma modularizada, contudo não foram encontrados modelos satisfatórios. Obs: as pesquisas focaram nas palavras-chave: **chassi 2wd**, **Arduino Car** e **Arduino Robot**.
 
 * **Módulo de Carregamento:** O projeto recebeu uma fonte de alimentação (carregador) de 5V e 1A com entrada micro-usb, o que permitirá o carregamento em tomadas domésticas diretamente.
+
+### Semana 21: (25/09/2026)
+**Foco da Semana:** Pesquisar referências/inspirações para a carcaça do carrinho
+
+* **Pesquisa de Modelagem 3D:** Realizado o aprofundamento das buscas em plataformas adicionais (MakerWorld e Yeggi). Como não foram encontrados modelos específicos para o chassi utilizado (2WD), um modelo para chassi 4WD foi selecionado para servir de inspiração e referência de design.
+
 ---
 ## 📖 Manual de Uso
 
