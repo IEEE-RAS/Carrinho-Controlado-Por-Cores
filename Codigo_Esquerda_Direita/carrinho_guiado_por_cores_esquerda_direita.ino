@@ -382,9 +382,7 @@ void decideAction() {
   switch (cor_detectada) {
     case 0: // Vermelho
       Serial.println("Vermelho detectado - (Direita)");
-      irParaDireita();
-      delay(1500);
-      
+      manobraVermelho();
       break;
       
     case 1: // Verde
