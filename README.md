@@ -290,6 +290,17 @@ Aqui registramos nosso progresso semanalmente. Cada entrada inclui atualizaçõe
 
 * **Pesquisa de Modelagem 3D:** realizado o aprofundamento das buscas em plataformas adicionais (MakerWorld e Yeggi). Como não foram encontrados modelos específicos para o chassi utilizado (2WD), um modelo para chassi 4WD foi selecionado para servir de inspiração e referência de design.
 
+
+### Semana 22: (02/10/2026)
+**Foco da Semana:** Realizar calibragem do carrinho e buscar identificar previsibilidades de possíveis erros e repará-las.
+
+* **Software:**
+    * **Calibração de Manobras:** Ajuste das curvas para a direita e para a esquerda.
+        * **Problema identificado:** Anteriormente, as curvas usavam um acionamento curto e velocidades praticamente iguais nos motores. Isso fazia com que o carrinho não completasse bem o giro e retornasse desalinhado.
+        * **Solução implementada:** Divisão das manobras em duas etapas:
+            * Um giro mais longo e controlado garantindo que o chassi consiga completar o ângulo necessário (aproximadamente 90 graus).
+            * Um trecho de alinhamento com velocidades diferenciadas entre os motores.  Após o giro, o carrinho avança por 1 segundo aplicando maior potência no motor do lado oposto à curva.
+        * **Resultado:** As curvas tornaram-se mais previsíveis, reduzindo a chance de o robô perder a linha ou voltar torto para a leitura dos sensores.
 ---
 ## 📖 Manual de Uso
 
