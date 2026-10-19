@@ -26,6 +26,7 @@ Este repositório serve como o diário de desenvolvimento oficial do projeto **R
 
   - **Hardware:**
       - [ ] Desenvolver chassi para proteção e organização dos circuitos, e estilização do projeto.
+      - [ ] Aprimorar movimentação do Carrinho nas curvas (esquerda ou direita)
       - [x] Finalizar sistema de calibração com Push-Button soldado ao circuito
 
 ## 🛠️ Tecnologias e Ferramentas
@@ -301,6 +302,24 @@ Aqui registramos nosso progresso semanalmente. Cada entrada inclui atualizaçõe
             * Um giro mais longo e controlado garantindo que o chassi consiga completar o ângulo necessário (aproximadamente 90 graus).
             * Um trecho de alinhamento com velocidades diferenciadas entre os motores.  Após o giro, o carrinho avança por 1 segundo aplicando maior potência no motor do lado oposto à curva.
         * **Resultado:** As curvas tornaram-se mais previsíveis, reduzindo a chance de o robô perder a linha ou voltar torto para a leitura dos sensores.
+        * 
+### Semana 23: (09/10/2026)
+**Foco da Semana:** Aprimorar a calibragem do carrinho em curvas.
+
+* **Software:**
+    * **Calibração de Manobras:** Nas curvas, foram atualizados os tempos de acionamento de cada roda para 1,2 segundos. Isso permitiu um melhor resultado empírico para uma curva em aproximadamente 90°. Além dessa, houve a redução do tempo de "retificação pós curva" para 0,5 segundos, visto que o Carrinho precisou apenas deste intervalo de tempo para alinhar a roda castor que estava desviando o seu movimento após uma curva.
+    * **Resultado:** O Carrinho executou 8 curvas no circuito, totalizando 2 voltas na melhor execução.
+
+### Semana 24: (09/10/2026)
+**Foco da Semana:** Aprimorar a calibragem do carrinho em curvas e Elaborar Novo Modelo 3D de Carcaça.
+
+* **Software:**
+    * **Calibração de Manobras:** Foram executados testes com a bateria carregada e, a partir disso foram identificadas mudanças nos resultados, o que exigiu novas correções. Contudo estas correções ainda não foram conclusivas, deixando o Carrinho com movimento imprevisível em algumas execuções. Será necessário fazer novos ajustes dos parâmetros de velocidade e tempo nos movimentos. 
+
+* **Modelagem 3D:**
+    * **Novo Modelo:** Foi construído um novo modelo 3D na plataforma TinkerCad, que conta com encaixe para duas pilhas 18650 (semelhante aos carregadores de pilhas 18650), e diversas aberturas para jumpers, uma para entrada microUSB e outra para o botão. O modelo possui menos curvas e inclinações o que exigirá menos filamento para impressão, em comparação com o modelo anterior.
+ 
+
 ---
 ## 📖 Manual de Uso
 
