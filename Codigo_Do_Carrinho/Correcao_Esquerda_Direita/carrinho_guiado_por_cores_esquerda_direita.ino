@@ -14,8 +14,8 @@
 //                PINOS - MOTORES + PWM
 // ======================================================
 
-// Motor A -> Direito
-// Motor B -> Esquerdo
+// Motor A -> Esquerdo
+// Motor B -> Direito
 #define MOTOR_A_IN1 10 // D3
 #define MOTOR_A_IN2 9 // D5
 #define MOTOR_B_IN1 13 // D6
@@ -322,7 +322,7 @@ void irParaFrente() {
   analogWrite(ENABLE_B, VELOCIDADE_MOTOR_B);
 }
 
-// VERMELHO
+// Azul
 void irParaDireita() {
 
   digitalWrite(MOTOR_A_IN1, LOW);
@@ -335,7 +335,7 @@ void irParaDireita() {
   analogWrite(ENABLE_B, VELOCIDADE_MOTOR_B);
 }
 
-// AZUL
+// VERMELHO
 void irParaEsquerda() {
 
   digitalWrite(MOTOR_A_IN1, HIGH);
@@ -382,7 +382,8 @@ void decideAction() {
   switch (cor_detectada) {
     case 0: // Vermelho
       Serial.println("Vermelho detectado - (Direita)");
-      manobraVermelho();
+      delay(200);
+      manobraEsquerda();
       break;
       
     case 1: // Verde
@@ -390,9 +391,10 @@ void decideAction() {
       irParaFrente();
       break;
       
-    case 2: // Azul
+    case 2: // Az1ul
       Serial.println("Azul detectado - (Esquerda)");
-      manobraAzul();
+      delay(200);
+      manobraDireita();
       break;
       
     case 3: // Preto
@@ -403,52 +405,57 @@ void decideAction() {
 }
 
 // Função para a manobra específica no azul
-void manobraAzul() {
+void manobraDireita() {
   Serial.println("Manobra Azul: Girando 90 graus para a esquerda...");
 
-  irParaEsquerda();
+  irParaDireita();
+  delay(1100); 
 
-  delay(1500); 
-
+  // Parar por 0,5 segundo
+  parar();
+  delay(500);
+  
   Serial.println("Manobra Azul: Alinhando para a frente...");
 
-  // 2. Ir para frente com o motor direito (A) mais forte que o esquerdo (B)
+  // 2. Ir para frente com o motor direito mais forte que o esquerdo 
   digitalWrite(MOTOR_A_IN1, LOW);
   digitalWrite(MOTOR_A_IN2, HIGH);
-  
+
   digitalWrite(MOTOR_B_IN1, LOW);
-  digitalWrite(MOTOR_B_IN2, HIGH); 
+  digitalWrite(MOTOR_B_IN2, HIGH);
   
-  // PWM do direito mais alto que o esquerdo.
-  analogWrite(ENABLE_A, VELOCIDADE_MOTOR_A + 20); // Motor direito mais forte
-  analogWrite(ENABLE_B, VELOCIDADE_MOTOR_B);  // Motor esquerdo mais fraco
+  // PWM do esquerdo mais alto que o direito.
+  analogWrite(ENABLE_A, VELOCIDADE_MOTOR_A); 
+  analogWrite(ENABLE_B, VELOCIDADE_MOTOR_B  + 15);  
   
   // Tempo que ele passa tentando se alinhar antes de voltar à leitura normal
-  delay(1000);   
+  delay(500);   
 }
 
 // Função para a manobra específica no vermelho
-void manobraVermelho() {
+void manobraEsquerda() {
   Serial.println("Manobra Vermelho: Girando 90 graus para a direita...");
 
-  irParaDireita();
-  
-  // Ajuste este tempo na prática para que o giro seja de exatamente 90 graus no seu chassi
-  delay(1500); 
+  irParaEsquerda();
+  delay(1100); 
+
+  // Parar por 0,5 segundo
+  parar();
+  delay(500);
 
   Serial.println("Manobra Vermelho: Alinhando para a frente...");
 
-  // 2. Ir para frente com o motor direito (A) mais forte que o esquerdo (B)
+  // 2. Ir para frente com o motor direito mais forte que o esquerdo 
   digitalWrite(MOTOR_A_IN1, LOW);
   digitalWrite(MOTOR_A_IN2, HIGH);
-  
+
   digitalWrite(MOTOR_B_IN1, LOW);
   digitalWrite(MOTOR_B_IN2, HIGH);
   
   // PWM do direito mais alto que o esquerdo.
-  analogWrite(ENABLE_A, VELOCIDADE_MOTOR_A); // Motor direito mais forte
-  analogWrite(ENABLE_B, VELOCIDADE_MOTOR_B + 20);  // Motor esquerdo mais fraco
+  analogWrite(ENABLE_A, VELOCIDADE_MOTOR_A + 15); 
+  analogWrite(ENABLE_B, VELOCIDADE_MOTOR_B); 
   
   // Tempo que ele passa tentando se alinhar antes de voltar à leitura normal
-  delay(1000);   
+  delay(500);   
 }
