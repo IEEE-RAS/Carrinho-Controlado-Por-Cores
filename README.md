@@ -310,7 +310,7 @@ Aqui registramos nosso progresso semanalmente. Cada entrada inclui atualizaçõe
     * **Calibração de Manobras:** Nas curvas, foram atualizados os tempos de acionamento de cada roda para 1,2 segundos. Isso permitiu um melhor resultado empírico para uma curva em aproximadamente 90°. Além dessa, houve a redução do tempo de "retificação pós curva" para 0,5 segundos, visto que o Carrinho precisou apenas deste intervalo de tempo para alinhar a roda castor que estava desviando o seu movimento após uma curva.
     * **Resultado:** O Carrinho executou 8 curvas no circuito, totalizando 2 voltas na melhor execução.
 
-### Semana 24: (09/10/2026)
+### Semana 24: (16/10/2026)
 **Foco da Semana:** Aprimorar a calibragem do carrinho em curvas e Elaborar Novo Modelo 3D de Carcaça.
 
 * **Software:**
@@ -319,6 +319,10 @@ Aqui registramos nosso progresso semanalmente. Cada entrada inclui atualizaçõe
 * **Modelagem 3D:**
     * **Novo Modelo:** Foi construído um novo modelo 3D na plataforma TinkerCad, que conta com encaixe para duas pilhas 18650 (semelhante aos carregadores de pilhas 18650), e diversas aberturas para jumpers, uma para entrada microUSB e outra para o botão. O modelo possui menos curvas e inclinações o que exigirá menos filamento para impressão, em comparação com o modelo anterior.
  
+ ### Semana 25: (23/10/2026)
+**Foco da Semana:** Aprimorar a calibragem do carrinho em curvas.
+
+* **Calibração de Manobras:** Os parâmetros de velocidade e tempo dos movimentos foram ajustados. Conseguiu-se resultados satisfatórios com a cor verde, porém a cor vermelha ainda precisa de uma análise melhor.  
 
 ---
 ## 📖 Manual de Uso
