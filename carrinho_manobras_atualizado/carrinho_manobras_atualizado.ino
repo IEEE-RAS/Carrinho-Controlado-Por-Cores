@@ -453,7 +453,7 @@ void manobraEsquerda() {
   digitalWrite(MOTOR_B_IN2, HIGH);
   
   // PWM do direito mais alto que o esquerdo.
-  analogWrite(ENABLE_A, VELOCIDADE_MOTOR_A + 5); 
+  analogWrite(ENABLE_A, VELOCIDADE_MOTOR_A); 
   analogWrite(ENABLE_B, VELOCIDADE_MOTOR_B - 5); 
   
   // Tempo que ele passa tentando se alinhar antes de voltar à leitura normal
