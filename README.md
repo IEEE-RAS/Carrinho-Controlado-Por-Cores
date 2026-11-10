@@ -1,4 +1,4 @@
-# 🤖 [Robô Orientado por Cores] - Diário de Desenvolvimento
+<img width="1033" height="775" alt="image" src="https://github.com/user-attachments/assets/02f56c52-c35d-4b2f-87ed-a9f62051369b" /># 🤖 [Robô Orientado por Cores] - Diário de Desenvolvimento
 
 **Equipe:** IEEE RAS - UEFS
 
@@ -323,6 +323,14 @@ Aqui registramos nosso progresso semanalmente. Cada entrada inclui atualizaçõe
 **Foco da Semana:** Aprimorar a calibragem do carrinho em curvas.
 
 * **Calibração de Manobras:** Os parâmetros de velocidade e tempo dos movimentos foram ajustados. Conseguiu-se resultados satisfatórios com a cor verde, porém a cor vermelha ainda precisa de uma análise melhor.  
+
+### Semana 26: (06/11/2026)
+**Foco da Semana:** Aprimorar a calibragem do carrinho em curvas e verificar possiveis entreves nas rodas.
+
+* **Ajuste nas engrenagens dos motores:** Foram realizados ajustes na caixa de redução do motor, uma vez que esta apresentava momentos de emperramento, comprometendo a execução adequada das manobras do carrinho. Ao abrir a caixa, verificou-se a presença de sujeira acumulada, além de uma folga que fazia com que uma engrenagem não se encaixasse suficientemente na outra. Constatou-se que as engrenagens giravam normalmente, porém, em determinado ponto do movimento, ocorria um salto (pulo de dente), evidenciando o encaixe insuficiente entre elas. Após a limpeza dos componentes e a correção da folga, o conjunto apresentou melhora significativa no desempenho, de modo que a roda que anteriormente travava já não manifesta tal comportamento.
+* 
+* **Calibração de Manobras:** Foram reajustados os parâmetros de velocidade e de tempo dos movimentos. Os resultados obtidos mostraram-se satisfatórios em ambos os percursos verde e vermelho, com movimentos suaves e execução mais consistente dos circuitos propostos, os quais o carrinho já consegue completar com maior êxito.
+
 
 ---
 ## 📖 Manual de Uso
