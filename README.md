@@ -1,5 +1,3 @@
-<img width="1033" height="775" alt="image" src="https://github.com/user-attachments/assets/02f56c52-c35d-4b2f-87ed-a9f62051369b" /># 🤖 [Robô Orientado por Cores] - Diário de Desenvolvimento
-
 **Equipe:** IEEE RAS - UEFS
 
 ## 📝 Visão Geral
